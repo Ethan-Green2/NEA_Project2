@@ -7,7 +7,7 @@ topic = st.text_input("Enter a Wikipedia topic:")
 
 if st.button("Scrape Wikipedia"):
     if topic:
-        url = f"https://en.wikipedia.org/wiki/{topic.replace(' ', '_')}"
+        url = f"https://en.wikipedia.org/wiki/{topic.replace(' ', '_')}" #Converts inputted topic as a valid URL for wikipedia
         st.write(f"Scraping: {url}")
 
         html = scrape_website(url)
